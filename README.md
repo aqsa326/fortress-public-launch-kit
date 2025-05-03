@@ -18,7 +18,3 @@ Core files (index.html, styles.css, analytics.js)
 	•	Privacy policy
 	•	GitHub CI workflow
 	•	README with setup instructions
-
-is ready.
-
-Download Fortress Deploy Kit
