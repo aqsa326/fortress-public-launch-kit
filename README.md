@@ -11,3 +11,14 @@
 - Firebase Admin SDK
 - Google Sign-In
 - Analytics logging
+
+http:///mnt/data/fortress_deploy_kit.zip
+Core files (index.html, styles.css, analytics.js)
+	•	Firebase deploy config (firebase.json)
+	•	Privacy policy
+	•	GitHub CI workflow
+	•	README with setup instructions
+
+is ready.
+
+Download Fortress Deploy Kit
