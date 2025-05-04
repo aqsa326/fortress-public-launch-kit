@@ -1,0 +1,14 @@
+Test
+Description
+Login Valid
+User enters correct email/pass → success
+Login Invalid
+Wrong pass → error message
+Biometric Present
+Biometric prompt opens and works
+Magic Link Sent
+Sends to valid email
+Register New
+Email/pass registration success
+Empty Fields
+Form validation blocks submit
