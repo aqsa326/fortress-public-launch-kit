@@ -3,3 +3,94 @@ git remote add origin https://github.com/aqsa326/fortress-public-launch-kit.git
 git add .
 git commit -m "Fortress public deploy kit v1"
 git push -u origin master
+    
+    Monitoring Layer (before inspection)
+	•	Implement Cloud Functions + Firebase Realtime DB listeners.
+	•	Add AI + regex + keyword filtering via Cloud Functions.
+	•	Track and log flagged content in a “Moderation Dashboard”.
+	•	Integrate OpenAI Moderation API for LLM-based inspection (safe search, hate speech, threats, etc).
+
+2. 18+ Content Enforcement
+	•	Role-based access flag for adult_content_creator: true.
+	•	Conditional access for users age_verified: true.
+	•	Use Google Vision API for NSFW detection on uploads.
+	•	Block underage access, blur previews, warnings.
+
+3. E-Commerce Store
+	•	Add Firebase Firestore collection products, orders.
+	•	UI for buyer, seller dashboards.
+	•	Integrate with JazzCash, EasyPaisa, PayPal.
+	•	Optional registration step: e-commerce sellers must submit:
+	•	CNIC
+	•	Proof of business
+	•	Pakistani FBR NTN Number
+
+4. Live Match Feature
+	•	Extend current live streaming with “Match Mode”
+	•	Score overlay HUD + real-time viewer poll/comments
+	•	Creator tags stream as a “Match”
+	•	Viewer gets real-time data on:
+	•	Team, Scores, Stats, Votes
+
+5. Private Chat Inbox
+	•	Create chats and messages Firestore subcollections
+	•	End-to-end encryption using libs like libsignal or fallback AES
+	•	Report/block message system
+	•	Notify if recipient screenshots
+
+6. Add Friend/Contact
+	•	Friend request system: status: pending, accepted, blocked
+	•	Use Firestore subcollection friends/{userId}
+	•	Add import from phone contacts (optional)
+
+7. Payment Gateway Integration
+	•	Firebase Functions backend
+	•	Integrate:
+	•	JazzCash: via API Gateway / WebView
+	•	EasyPaisa: OpenAPI w/ transaction webhook
+	•	PayPal: Official SDKs for subscriptions + payouts
+
+8. Language, Law Enforcement, Localization
+	•	Multilingual: Urdu + English
+	•	Implement rule-sets in Firebase:
+	•	Hate speech
+	•	Nudity
+	•	Blasphemy filters
+	•	Logging reports to secure reports collection
+	•	“Send to PTA portal” via email or webhook (optional)
+
+9. Identity + Anti-Discrimination
+	•	Ask users for:
+	•	Ethnicity (optional)
+	•	Gender identity (select or write-in)
+	•	Warn/disallow hate speech against these attributes
+	•	Anti-discrimination AI filter in comments/posts
+	•	Protests against equality or policy = flagged automatically
+
+10. Enforcement
+	•	Government mandates hardcoded in Firebase rules/laws node
+	•	Violations trigger:
+	•	Notification
+	•	Automatic bans
+	•	Logged to law_violations Firestore collection
+	•	Monthly logs auto-exported for manual inspection
+
+⸻
+
+IMMEDIATE NEXT STEPS
+
+Now proceeding to implement:
+
+Firebase Function for:
+	•	Content moderation
+	•	Age enforcement
+	•	AI filtering for hate/offensive/political protest material
+
+E-Commerce Store Scaffold
+	•	Firestore Collections: products, orders, sellers
+
+Private Inbox & Friend System
+	•	Firestore schema setup
+
+JazzCash + EasyPaisa Integration
+	•	REST API support (proxy via Firebase Functions)
