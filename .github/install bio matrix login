@@ -1,0 +1,12 @@
+expo install expo-local-authentication
+		tsx
+	import * as LocalAuthentication from 'expo-local-authentication';
+
+const biometricLogin = async () => {
+  const result = await LocalAuthentication.authenticateAsync({
+    promptMessage: 'Login with biometrics',
+  });
+  if (result.success) {
+    // Perform secure auto-login with stored credentials/token
+  }
+};
