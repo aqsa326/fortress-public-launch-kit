@@ -1,0 +1,35 @@
+const [email, setEmail] = useState('');
+const { login, sendMagicLink } = useAuth();
+<Button title="Login" onPress={() => login(email, pass)} />
+<Button title="Send Magic Link" onPress={() => sendMagicLink(email)} />
+	
+⸻
+
+2. Phase Expansion Plan: Subsystems
+	Subsystem
+Key Features
+Tools
+Auth & Age-Gate
+18+ confirm + biometric + legal compliance
+Firebase Auth + LocalAuth
+Chat
+Inbox, delete/report, friend-only
+Firestore, Message schema
+Friend System
+Add/accept/decline
+Firestore subcollections
+E-Commerce
+Add products, cart, order, KYC
+Firestore + Stripe or custom
+Payments
+JazzCash, EasyPaisa, PayPal
+Custom REST API wrapper
+Monitoring
+AI moderation of chats/posts
+OpenAI / TensorFlow + Firebase Functions
+Legal
+Language compliance + enforcement
+Modal agreements, Terms acceptance logs
+Streaming
+Secure match streaming (HLS)
+Cloudflare Stream or Mux
