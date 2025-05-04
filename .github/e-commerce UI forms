@@ -1,0 +1,10 @@
+<View className="p-4 space-y-3">
+  <TextInput placeholder="Full Name" />
+  <TextInput placeholder="CNIC" keyboardType="numeric" />
+  <TextInput placeholder="Gender" />
+  <TextInput placeholder="Ethnicity (Optional)" />
+  <TextInput placeholder="DOB" />
+  <TextInput placeholder="Address" />
+  <UploadImage label="Upload CNIC Front" />
+  <UploadImage label="Upload CNIC Back" />
+</View>
