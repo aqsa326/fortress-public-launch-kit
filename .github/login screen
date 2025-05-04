@@ -1,0 +1,18 @@
+import React, { useState } from 'react';
+import { View, TextInput, Button, Text } from 'react-native';
+import { useAuth } from '../context/AuthContext';
+
+export default function LoginScreen() {
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
+  const { login, sendMagicLink } = useAuth();
+
+  return (
+    <View className="flex-1 justify-center p-6 bg-white">
+      <TextInput placeholder="Email" value={email} onChangeText={setEmail} className="border p-2 mb-2" />
+      <TextInput placeholder="Password" value={pass} onChangeText={setPass} secureTextEntry className="border p-2 mb-2" />
+      <Button title="Login" onPress={() => login(email, pass)} />
+      <Button title="Send Magic Link" onPress={() => sendMagicLink(email)} />
+    </View>
+  );
+}
