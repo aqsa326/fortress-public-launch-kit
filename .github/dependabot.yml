@@ -1,0 +1,93 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2[
+
+ {
+
+ "type": "discussion_category",
+
+ "url": "https://github.com/aqsa326/fortress-public-launch-kit/discussion_categories/
+
+Announcements",
+
+ "repository": "https://github.com/aqsa326/fortress-public-launch-kit",
+
+ "name": "Announcements",
+
+ "emoji": ":mega:",
+
+ "description": "Updates from maintainers"
+
+ },
+
+ {
+
+ "type": "discussion_category",
+
+ "url": "https://github.com/aqsa326/fortress-public-launch-kit/discussion_categories/
+
+General",
+
+ "repository": "https://github.com/aqsa326/fortress-public-launch-kit",
+
+ "name": "General",
+
+ "emoji": ":speech_balloon:",
+
+ "description": "Chat about anything and everything here"
+
+ },
+
+ {
+
+ "type": "discussion_category",
+
+ "url": "https://github.com/aqsa326/fortress-public-launch-kit/discussion_categories/
+
+Q%26A",
+
+ "repository": "https://github.com/aqsa326/fortress-public-launch-kit",
+
+ "name": "Q&A",
+
+ "emoji": ":pray:",
+
+ "description": "Ask the community for help"
+
+ },
+
+ {
+
+ "type": "discussion_category",
+
+ "url": "https://github.com/aqsa326/fortress-public-launch-kit/discussion_categories/
+
+Ideas",
+
+ "repository": "https://github.com/aqsa326/fortress-public-launch-kit",
+
+ "name": "Ideas",
+
+ "emoji": ":bulb:",
+
+ "description": "Share ideas for new features"
+
+ },
+
+ {
+
+ "type": "discussion_category",
+
+ "url": "https://github.com/aqsa326/fortress-public-launch-kit/discussion_categories/
+
+Show%20and%20tell",
+
+ "repository": "https://github.com/aqsa326/fortress-public-launch-kit",
+updates:
+  - package-ecosystem: "" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
