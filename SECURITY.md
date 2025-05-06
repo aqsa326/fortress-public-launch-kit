@@ -28,3 +28,24 @@
 	<string>1:734067921066:ios:396ead8a94105588c280d3</string>
 </dict>
 </plist>
+	
+	// Firestore.rules
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /users/{userId} {
+      allow read, write: if request.auth.uid == userId;
+    }
+
+    match /tasks/{taskId} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+
+    match /rewards/{rewardId} {
+      allow read: if request.auth != null && 
+                   get(/databases/$(database)/documents/users/$(request.auth.uid)).data.tier >= resource.data.requiredTier;
+    }
+  }
+}
