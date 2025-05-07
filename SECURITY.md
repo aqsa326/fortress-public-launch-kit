@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>GCM_SENDER_ID</key>
-	<string>734067921066</string>
+	
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
