@@ -2,10 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>API_KEY</key>
-	<string>AIzaSyBZ9FnqlhJFPXfLqEbUTx-dHF1Y4WcMDSA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>734067921066</string>
+	
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
@@ -28,3 +26,24 @@
 	<string>1:734067921066:ios:396ead8a94105588c280d3</string>
 </dict>
 </plist>
+	
+	// Firestore.rules
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /users/{userId} {
+      allow read, write: if request.auth.uid == userId;
+    }
+
+    match /tasks/{taskId} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+
+    match /rewards/{rewardId} {
+      allow read: if request.auth != null && 
+                   get(/databases/$(database)/documents/users/$(request.auth.uid)).data.tier >= resource.data.requiredTier;
+    }
+  }
+}
