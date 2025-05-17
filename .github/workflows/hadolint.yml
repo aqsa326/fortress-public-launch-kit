@@ -10,4 +10,4 @@ on:
     steps:
       - uses: actions/checkout@v2
       - run: npm install -g firebase-tools
-      - run: firebase deploy --token "${{ secrets.FIREBASE_TOKEN }}"
+      - run: firebase deploy --token "${{ secrets.DOCS_BOT_PAT_BASE }}"
